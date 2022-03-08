@@ -146,20 +146,20 @@ Il ne me semble pas raisonnable que le rogramme soit dépendant d'une instructio
 
 Pour corriger cette erreur il suffit de remplacer les lignes
 
-```
+```c
 long n = *(long*) arg;
 ```
 par
-```
+```c
 long n = (long)arg;
 ```
 et
 
-```
+```c
 pthread_create(&threads[i], NULL, func, (void *)&i);
 ```
 par
-```
+```c
 pthread_create(&threads[i], NULL, func, (void *)i);
 ```
 
